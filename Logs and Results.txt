@@ -1,0 +1,191 @@
+Question 1: What is the main innovation introduced in the "Attention is All You Need" paper?
+
+Context / Retrieved:
+
+Doc 1: 
+Preview: Ben Mann implemented sampling without replacement during training.
+Alec Radford originally demonstra...
+Score: 0.9472352862358093
+
+Doc 2: 
+Preview: transduction problems such as language modeling and machine translation [ 29, 2, 5]. Numerous
+effort...
+Score: 1.0016396045684814
+
+Doc 3: 
+Preview: mation Processing Systems.
+Markus N Rabe and Charles Staats. 2021. Self-
+attention does not need o(n...
+Score: 1.0745872259140015
+
+Doc 4: 
+Preview: Shot Learning. In Advances in neural information processing systems, pages 3630–3638, 2016.
+[VSP+17]...
+Score: 1.0787990093231201
+
+Doc 5: 
+Preview: are the main difference with the original architec-
+ture, and where we were found the inspiration fo...
+Score: 1.0985069274902344
+
+Generated Response: The main innovation introduced in the "Attention is All You Need" paper is the Transformer architecture, which replaces traditional recurrent neural networks (RNNs) or encoder-decoder architectures with self-attention mechanisms. This allows for parallelization of the computation and efficient processing of long-range dependencies in sequential data.
+
+Question 2: How does BERT differ from traditional left-to-right language models?
+
+Context / Retrieved:
+
+Doc 1: 
+Preview: BERT (Ours)
+Trm Trm Trm
+Trm Trm Trm
+...
+...
+Trm Trm Trm
+Trm Trm Trm
+...
+...
+OpenAI GPT
+Lstm
+ELMo
+Lst...
+Score: 0.6935840845108032
+
+Doc 2: 
+Preview: Instead, we pre-train BERT using two unsuper-
+vised tasks, described in this section. This step
+is p...
+Score: 0.6966012120246887
+
+Doc 3: 
+Preview: approach.
+The most comparable existing pre-training
+method to BERT is OpenAI GPT, which trains a
+lef...
+Score: 0.8171786665916443
+
+Doc 4: 
+Preview: tasks. Sentence pairs are packed together into a
+single sequence. We differentiate the sentences in
+...
+Score: 0.8415172100067139
+
+Doc 5: 
+Preview: model pre-training. For the pre-training corpus we
+use the BooksCorpus (800M words) (Zhu et al.,
+201...
+Score: 0.8822321891784668
+
+Generated Response: BERT differs from traditional left-to-right language models in that it uses a bidirectional Transformer architecture, whereas most previous models were trained using left-to-right or right-to-left approaches. This allows BERT's representations to be jointly conditioned on both left and right context in all layers, making it strictly more powerful than either a left-to-right model or the shallow concatenation of a left-to-right and a right-to-left model.
+
+Question 3: Describe the few-shot learning capability of GPT-3 with an example.
+
+Context / Retrieved:
+
+Doc 1: 
+Preview: on the test set. GPT-3 few-shot is given a total of 32 examples within the context of each task and ...
+Score: 0.4576781690120697
+
+Doc 2: 
+Preview: information, or from algorithmic improvements.
+A limitation, or at least uncertainty, associated wit...
+Score: 0.6199918389320374
+
+Doc 3: 
+Preview: Results are shown in Table 3.4. Zero-shot GPT-3, which only receives on a natural language descripti...
+Score: 0.6349920034408569
+
+Doc 4: 
+Preview: more systematic way, we also evaluate GPT-3 on a standardized collection of datasets, the SuperGLUE ...
+Score: 0.6601728796958923
+
+Doc 5: 
+Preview: parameters) in order to compare their performance to GPT-3 in the zero, one and few-shot settings. B...
+Score: 0.7325974106788635
+
+Generated Response: The few-shot learning capability of GPT-3 is demonstrated by providing only a single example demonstration for a new task, and then using the model to perform that task without any additional training or fine-tuning. For example, imagine a task where you want GPT-3 to translate English text into Spanish. You would provide it with just one example of an English sentence and its corresponding Spanish translation, and then ask it to generate translations for new sentences without any further training.
+
+Question 4: What is the loss function used in CLIP and why is it effective?
+
+Context / Retrieved:
+
+Doc 1: 
+Preview: data distribution with the training data in CLIP. To better ﬁt our pre-training framework, we conver...
+Score: 1.0272789001464844
+
+Doc 2: 
+Preview: including (1) CLIP+continuous learning: we train vanilla CLIP (pretrained weights as initialization)...
+Score: 1.1061458587646484
+
+Doc 3: 
+Preview: their modalities (image or text). The relation r, which is represented by language tokens, is sent t...
+Score: 1.1386523246765137
+
+Doc 4: 
+Preview: for image encoder. For text and image encoder, we use the pre-trained weights in the original CLIP
+a...
+Score: 1.2162401676177979
+
+Doc 5: 
+Preview: Table 5: Ablation studies of continuous learning / training objectives. We report results on Flickr3...
+Score: 1.271475911140442
+
+Generated Response: The loss function used in CLIP (Contrastive Language-Image Pre-training) is a combination of four losses:
+
+1. LE2E: The standard contrastive loss between the image and text embeddings.
+2. LE2R: The contrastive loss between the relation tokens and the text embeddings.
+3. LG2E: The contrastive loss between the global average pooling (GAP) of the image features and the text embeddings.
+4. LKD: The KL divergence loss between the output of the CLIP model and the teacher model.
+
+The effective combination of these losses allows CLIP to learn a joint representation that can be used for various downstream tasks, such as image-text retrieval and visual question answering.
+
+The KL divergence loss (LKD) is particularly important in the continuous learning setting, where the model is fine-tuned on new data. Without LKD, the model may forget previously learned knowledge, leading to a significant performance drop. The KD loss helps to regularize the model's behavior and prevent it from drifting away from its initial knowledge.
+
+In summary, the combination of these four losses enables CLIP to learn a robust and transferable representation that can be used for various tasks, while the KL divergence loss plays a crucial role in the continuous learning setting.
+
+Question 5: What approach does LLaMA take to reduce computational cost during training?
+
+Context / Retrieved:
+
+Doc 1: 
+Preview: instructions data rapidly leads to improvements
+on MMLU. Although the non-ﬁnetuned version
+of LLaMA-...
+Score: 0.9138150215148926
+
+Doc 2: 
+Preview: The details of the hyper-parameters for our dif-
+ferent models are given in Table 2.
+2.3 Optimizer
+O...
+Score: 0.9906381964683533
+
+Doc 3: 
+Preview: 6.3 Energy Usage
+Practical large-scale pre-training requires large amounts of computation, which is ...
+Score: 1.0240871906280518
+
+Doc 4: 
+Preview: Humanities STEM Social Sciences Other Average
+GPT-NeoX 20B 29.8 34.9 33.7 37.7 33.6
+GPT-3 175B 40.8 ...
+Score: 1.0471876859664917
+
+Doc 5: 
+Preview: mann et al. (2022) is to determine how to best
+scale the dataset and model sizes for a particular
+tr...
+Score: 1.0591070652008057
+
+Generated Response: According to the text, LLaMA takes several approaches to reduce computational cost during training:
+
+1. **Efficient implementation**: The authors make several optimizations to improve the training efficiency.
+
+2. **Cosine learning rate schedule**: They use a cosine learning rate schedule, which means that the final learning rate is equal to 10% of the maximum learning rate. This helps to reduce the number of iterations required for convergence.
+
+3. **Batch size and model size**: The authors vary the batch size and model size based on the size of the model (see Table 2 for details). This allows them to train larger models more efficiently.
+
+4. **Warmup steps**: They use a warm-up period with 2,000 steps, which helps the model learn quickly in the early stages of training.
+
+5. **Gradient clipping and weight decay**: The authors apply gradient clipping (1.0) and weight decay (0.1) to stabilize the training process and prevent exploding gradients.
+
+These optimizations enable LLaMA to train large models efficiently while achieving good performance on various tasks.
